@@ -1,6 +1,6 @@
-# Interpretable Lazy Classification with Interval Pattern Structures via Local Interval Explanations
+# Interpretable Lazy Classification with Interval Pattern Structures and Local Interval Explanations
 
-This repository contains the code developed for the paper titled "Interpretable Lazy Classification with Interval Pattern Structures via Local Interval Explanations".
+This repository contains the code developed for the paper titled "Interpretable Lazy Classification with Interval Pattern Structures and Local Interval Explanations".
 
 ## Abstract
 --
