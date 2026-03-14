@@ -1,10 +1,9 @@
-# Interpretable Lazy Classification for Numerical Data using Interval Pattern Structures
+# Interpretable Lazy Classification with Interval Pattern Structures via Local Interval Explanations
 
-This repository contains the code developed for the paper titled "Interpretable Lazy Classification for Numerical Data using Interval Pattern Structures".
+This repository contains the code developed for the paper titled "Interpretable Lazy Classification with Interval Pattern Structures via Local Interval Explanations".
 
 ## Abstract
-This paper evaluates interpretable lazy classification methods based on Interval Pattern Structures (IPS), focusing on the Formal Concept Analysis Lazy Classifier (FCALC) and an IPS-based k-Nearest Neighbor (IPS-KNN) classifier. For FCALC, we tested multiple decision functions and treated the function as a hyperparameter, increasing the model's flexibility. For IPS-KNN, we extended the method to support multi-class classification and improved interpretability by introducing feature importance scoring. We further simplified IPS-KNN through localized feature selection tailored to each query object. These improvements were evaluated across diverse datasets. The results highlight the robustness and interpretability of IPS-based models—especially IPS-KNN—while maintaining compact representations and delivering competitive classification performance.
-
+--
 
 ## Usage Instructions
 The instructions for FCALC and its randomized version can be seen in  [FCALC/README.md](FCALC/README.md). 
