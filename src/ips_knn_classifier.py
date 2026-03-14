@@ -17,7 +17,7 @@ def expand_hyperrectangle_by_information_gain(
     mask = functools.reduce(lambda x, y: x & y, condition_list)
     count_inside_rect = mask.sum()
 
-    cols = set(X.columns)
+    cols = list(X.columns)
     used_cols = []
 
     X_new = X.copy()
@@ -25,7 +25,9 @@ def expand_hyperrectangle_by_information_gain(
     while len(X_new) > count_inside_rect:
         max_gain = -1
         max_gain_col = None
-        for col in list(cols.difference(set(used_cols))):
+        for col in cols:
+            if col in used_cols:
+                continue
             gain = (
                 InformationGainAnalyzer.find_information_gain_for_splitting_by_interval(
                     X_new, y_new, col, rect[col]
@@ -81,7 +83,7 @@ class IPSKNNClassifier:
         distances = np.power(
             np.sum(np.power(np.subtract(df, sample), self.p), axis="columns"),
             1 / self.p,
-        ).sort_values()
+        ).sort_values(kind="mergesort")
         knn_indeces = np.array(distances[: self.k].index)
         knn = df.loc[knn_indeces]
 
